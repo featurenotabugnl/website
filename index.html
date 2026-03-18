@@ -24,8 +24,16 @@
 			.feature {
 				color: #cd1ec7;
 			}
-			.clap {
+			.👏,
+			.🐛 {
 				margin: 0 0.4em 0 0.15em;
+			}
+			.🐛,
+			.bug:hover ~ .👏 {
+				display: none;
+			}
+			.bug:hover ~ .🐛 {
+				display: inline;
 			}
 		</style>
 
@@ -35,7 +43,7 @@
 
 		<div class="logo">
 			<span class="feature">feature</span><br>
-			not<span class="clap">👏</span>a<span class="clap">👏</span>bug<span class="clap">👏</span>
+			not<span class="👏">👏</span>a<span class="👏">👏</span><span class="bug">bug</span><span class="🐛">🐛</span><span class="👏">👏</span>
 		</div>
 
 	</body>
