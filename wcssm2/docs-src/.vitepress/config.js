@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'WCSSM2',
   description: 'WCSSM2 documentation',
+  srcDir: './docs',
   base: '/wcssm2/docs/',
   cleanUrls: true,
   themeConfig: {
