@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd wcssm2/docs-src && npm install && npm run build && cd ../.. && rm -rf wcssm2/docs && cp -r wcssm2/docs-src/.vitepress/dist wcssm2/docs",
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/wcssm2/docs", "destination": "/wcssm2/docs/" }
+  ]
+}

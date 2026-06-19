@@ -13,3 +13,11 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+### VitePress
+node_modules
+wcssm2/docs-src/.vitepress/dist
+wcssm2/docs-src/.vitepress/cache
+
+# Generated build output — never committed, wiped and recreated on every build
+wcssm2/docs/
