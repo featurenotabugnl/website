@@ -11,6 +11,7 @@ export default defineConfig({
   ignoreDeadLinks: true,
   themeConfig: {
     nav: [
+      { text: 'Plugin', link: '/landing' },
       { text: 'Home', link: '/' },
       { text: 'Demo', link: '/guide/setup-demo' }
     ],
