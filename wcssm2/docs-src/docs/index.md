@@ -8,13 +8,13 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/getting-started
+      link: /docs/guide/getting-started
     - theme: alt
       text: How it works
-      link: /guide/how-it-works
+      link: /docs/guide/how-it-works
     - theme: alt
       text: Configure a sale
-      link: /sales/overview
+      link: /docs/sales/overview
 
 features:
   - title: Flexible scheduling
@@ -52,13 +52,13 @@ effective price the instant a price is read, by hooking WooCommerce's own price 
 That means the displayed price always reflects the exact moment it's shown, several sales
 can be active at once, and turning a sale off restores original prices immediately — with
 nothing to clean up. (One consequence: tools that read prices straight from the database,
-bypassing WooCommerce, will see the regular price. See [How it works](/guide/how-it-works).)
+bypassing WooCommerce, will see the regular price. See [How it works](/docs/guide/how-it-works).)
 
 ## Next steps
 
-- New here? Start with the [Introduction](/guide/introduction) and [Getting Started](/guide/getting-started).
-- Ready to build one? Walk through [configuring a sale](/sales/overview).
-- Curious about the engine? Read [How it works](/guide/how-it-works).
+- New here? Start with the [Introduction](/docs/guide/introduction) and [Getting Started](/docs/guide/getting-started).
+- Ready to build one? Walk through [configuring a sale](/docs/sales/overview).
+- Curious about the engine? Read [How it works](/docs/guide/how-it-works).
 
 ::: tip Requirements
 WooCommerce must be installed and active — the plugin does nothing without it.

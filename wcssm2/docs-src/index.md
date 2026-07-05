@@ -43,7 +43,7 @@ onUnmounted(() => observer?.disconnect())
     </p>
     <div class="lp-hero-actions">
       <a class="lp-btn lp-btn-brand" href="#cta">Get the plugin</a>
-      <a class="lp-btn lp-btn-alt" :href="withBase('/')">Read the docs</a>
+      <a class="lp-btn lp-btn-alt" :href="withBase('/docs/')">Read the docs</a>
     </div>
   </div>
 </header>
@@ -56,8 +56,8 @@ onUnmounted(() => observer?.disconnect())
     <a href="#screenshots" :class="{ 'lp-active': active === 'screenshots' }">Screenshots</a>
     <a href="#cta" :class="{ 'lp-active': active === 'cta' }">Get the plugin</a>
     <span class="lp-menu-spacer" aria-hidden="true"></span>
-    <a :href="withBase('/')" class="lp-menu-ext">Docs</a>
-    <a :href="withBase('/guide/faq')" class="lp-menu-ext">FAQ</a>
+    <a :href="withBase('/docs/')" class="lp-menu-ext">Docs</a>
+    <a :href="withBase('/docs/faq')" class="lp-menu-ext">FAQ</a>
   </div>
 </nav>
 
@@ -162,12 +162,12 @@ onUnmounted(() => observer?.disconnect())
     <div class="lp-hero-actions">
       <!-- TODO: point at the WooCommerce marketplace listing once it exists -->
       <a class="lp-btn lp-btn-brand" href="#">Get it on WooCommerce.com</a>
-      <a class="lp-btn lp-btn-alt" :href="withBase('/guide/getting-started')">Getting started guide</a>
+      <a class="lp-btn lp-btn-alt" :href="withBase('/docs/guide/getting-started')">Getting started guide</a>
     </div>
     <p class="lp-fineprint">
       GPL-licensed, like WordPress itself. Requires WooCommerce.
-      Questions first? Browse the <a :href="withBase('/')">documentation</a>
-      or the <a :href="withBase('/guide/faq')">FAQ</a>.
+      Questions first? Browse the <a :href="withBase('/docs/')">documentation</a>
+      or the <a :href="withBase('/docs/faq')">FAQ</a>.
     </p>
   </div>
 </section>
