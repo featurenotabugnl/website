@@ -19,5 +19,12 @@ node_modules
 wcssm2/docs-src/.vitepress/dist
 wcssm2/docs-src/.vitepress/cache
 
-# Generated build output — never committed, wiped and recreated on every build
+# Generated build output — never committed, wiped and recreated on every build.
+# The VitePress site is built for base /wcssm2/, so the whole dist is copied
+# into wcssm2/ (landing at /wcssm2/, docs under /wcssm2/docs/).
 wcssm2/docs/
+wcssm2/assets/
+wcssm2/index.html
+wcssm2/404.html
+wcssm2/hashmap.json
+wcssm2/vp-icons.css

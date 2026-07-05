@@ -26,20 +26,21 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 - Indentation is tabs.
 - `.DS_Store` and other macOS cruft are gitignored — do not commit them.
 
-## Docs (`wcssm2/docs`)
+## The wcssm2 site (`wcssm2/`)
 
-A [VitePress](https://vitepress.dev/) documentation site served at `/wcssm2/docs/`. It is **not built locally** — Vercel builds it on deploy via the `buildCommand` in `vercel.json`.
+A [VitePress](https://vitepress.dev/) site serving the whole `/wcssm2/` path: the marketing landing page at `/wcssm2/` and the documentation under `/wcssm2/docs/`. It is **not built locally** — Vercel builds it on deploy via the `buildCommand` in `vercel.json`.
 
-Three folders, easy to confuse:
+The folders, easy to confuse:
 
-- `wcssm2/docs-src/` — **the source you edit.** Committed. Holds `package.json`, `.vitepress/config.js`, and (because of `srcDir: './docs'`) the Markdown under `wcssm2/docs-src/docs/`.
-- `wcssm2/docs-src/docs/` — the Markdown content. File path = URL path under `/wcssm2/docs/`.
-- `wcssm2/docs/` — **generated build output.** Gitignored, wiped and recreated on every deploy. Never hand-edit it.
+- `wcssm2/docs-src/` — **the source you edit.** Committed. Holds `package.json`, `.vitepress/config.js` (`srcDir` is the repo root of the site, `base` is `/wcssm2/`), the landing page `index.md`, and the docs Markdown under `docs/`.
+- `wcssm2/docs-src/docs/` — the docs content. File path = URL path under `/wcssm2/docs/`.
+- Everything else under `wcssm2/` (`index.html`, `docs/`, `assets/`, `404.html`, `hashmap.json`, `vp-icons.css`) — **generated build output.** Gitignored, wiped and recreated on every deploy (the dist is copied into `wcssm2/`). Never hand-edit it.
 
-The source folder is deliberately named `docs-src`, not `docs`: the build deletes and recreates the `wcssm2/docs/` output folder, so source and output must not share a path.
+The source folder is deliberately named `docs-src`, not `docs`: the build deletes and recreates the generated output under `wcssm2/`, so source and output must not share a path.
 
-Conventions when working in the docs:
+Conventions when working in the site:
 
-- `base` is `/wcssm2/docs/` in `.vitepress/config.js`. Internal links resolve relative to that base, so a `link: '/'` points at the docs home, not the site root.
-- Adding a page under `docs-src/docs/` usually means also adding a matching entry to the `sidebar` (and optionally `nav`) array in `.vitepress/config.js`. Update both in the same change so they don't drift.
-- The build runs `cd wcssm2/docs-src && npm install && npm run build`, then copies `.vitepress/dist` to `wcssm2/docs/`. To reproduce the deploy build locally: run those steps and serve the repo root.
+- `base` is `/wcssm2/` in `.vitepress/config.js`. Internal links resolve relative to that base, so `link: '/'` is the landing page and `link: '/docs/'` is the docs home.
+- Adding a page under `docs-src/docs/` usually means also adding a matching entry to the `sidebar` (and optionally `nav`) in `.vitepress/config.js` — the sidebar is scoped to `/docs/` paths; the landing page hides it via frontmatter. Update both in the same change so they don't drift.
+- The build runs `cd wcssm2/docs-src && npm install && npm run build`, then copies `.vitepress/dist/.` into `wcssm2/`. To reproduce the deploy build locally: run those steps and serve the repo root.
+- `cleanUrls` is enabled both in VitePress (pages build to `faq.html`, linked as `/docs/faq`) and in `vercel.json` (so direct hits to extensionless URLs serve the `.html` file).

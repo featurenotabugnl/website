@@ -1,6 +1,7 @@
 {
-  "buildCommand": "cd wcssm2/docs-src && npm install && npm run build && cd ../.. && rm -rf wcssm2/docs && cp -r wcssm2/docs-src/.vitepress/dist wcssm2/docs",
+  "buildCommand": "cd wcssm2/docs-src && npm install && npm run build && cd ../.. && rm -rf wcssm2/docs wcssm2/assets wcssm2/index.html wcssm2/404.html wcssm2/hashmap.json wcssm2/vp-icons.css && cp -r wcssm2/docs-src/.vitepress/dist/. wcssm2/",
   "outputDirectory": ".",
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/wcssm2/docs", "destination": "/wcssm2/docs/" }
   ]
