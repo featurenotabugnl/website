@@ -32,18 +32,33 @@ onUnmounted(() => observer?.disconnect())
 
 <!-- ============================== Hero ============================== -->
 <header class="lp-hero">
-  <div class="lp-container">
-    <p class="lp-eyebrow">A WooCommerce plugin</p>
-    <h1 class="lp-hero-title">Scheduled Sale Manager</h1>
-    <p class="lp-hero-text">Store-wide sales, on your schedule.</p>
-    <p class="lp-hero-tagline">
-      Run percentage or fixed discounts across exactly the products you choose —
-      on the dates and recurring schedules you set. No spreadsheet sessions, no
-      editing products one by one, nothing to undo afterwards.
-    </p>
-    <div class="lp-hero-actions">
-      <a class="lp-btn lp-btn-brand" href="#cta">Get the plugin</a>
-      <a class="lp-btn lp-btn-alt" :href="withBase('/docs/')">Read the docs</a>
+  <div class="lp-container lp-hero-grid">
+    <div class="lp-polaroids" aria-hidden="true">
+      <!-- TODO: replace the placeholders with real screenshots (docs/public/…) -->
+      <figure class="lp-polaroid lp-polaroid-back">
+        <div class="lp-polaroid-img"><span>🗓️</span>Screenshot</div>
+        <figcaption>the schedule editor</figcaption>
+      </figure>
+      <figure class="lp-polaroid lp-polaroid-front">
+        <div class="lp-polaroid-img"><span>📋</span>Screenshot</div>
+        <figcaption>your sales, at a glance</figcaption>
+      </figure>
+    </div>
+    <div class="lp-hero-copy">
+      <p class="lp-eyebrow">A WooCommerce plugin</p>
+      <div class="lp-hero-tilt">
+        <h1 class="lp-hero-title">Scheduled Sale Manager</h1>
+        <p class="lp-hero-text">Store-wide sales, on your schedule.</p>
+      </div>
+      <p class="lp-hero-tagline">
+        Run percentage or fixed discounts across exactly the products you choose —
+        on the dates and recurring schedules you set. No spreadsheet sessions, no
+        editing products one by one, nothing to undo afterwards.
+      </p>
+      <div class="lp-hero-actions">
+        <a class="lp-btn lp-btn-brand" href="#cta">Get the plugin</a>
+        <a class="lp-btn lp-btn-alt" :href="withBase('/docs/')">Read the docs</a>
+      </div>
     </div>
   </div>
 </header>
@@ -192,10 +207,21 @@ onUnmounted(() => observer?.disconnect())
 /* ------------------------------ Hero ------------------------------ */
 
 .lp-hero {
-  padding: 96px 0 80px;
-  text-align: center;
+  padding: 88px 0 72px;
+  overflow: hidden;
   background:
     radial-gradient(60% 80% at 50% 0%, var(--vp-c-brand-soft), transparent 70%);
+}
+
+.lp-hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.lp-hero-copy {
+  flex: 1;
+  min-width: 0;
 }
 
 .lp-eyebrow {
@@ -206,9 +232,14 @@ onUnmounted(() => observer?.disconnect())
   color: var(--vp-c-brand-1);
 }
 
+.lp-hero-tilt {
+  transform: rotate(-2deg);
+  transform-origin: left center;
+}
+
 .lp-hero-title {
   margin: 8px 0 0;
-  font-size: clamp(36px, 6vw, 60px);
+  font-size: clamp(36px, 5vw, 56px);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -220,14 +251,14 @@ onUnmounted(() => observer?.disconnect())
 
 .lp-hero-text {
   margin: 12px 0 0;
-  font-size: clamp(22px, 3.5vw, 32px);
+  font-size: clamp(20px, 3vw, 28px);
   font-weight: 700;
   color: var(--vp-c-text-1);
 }
 
 .lp-hero-tagline {
-  max-width: 640px;
-  margin: 20px auto 0;
+  max-width: 560px;
+  margin: 24px 0 0;
   font-size: 17px;
   line-height: 1.6;
   color: var(--vp-c-text-2);
@@ -236,9 +267,73 @@ onUnmounted(() => observer?.disconnect())
 .lp-hero-actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 12px;
   margin-top: 32px;
+}
+
+/* ------------------------- Hero polaroids ------------------------- */
+
+.lp-polaroids {
+  position: relative;
+  flex: 0 0 380px;
+  height: 400px;
+}
+
+.lp-polaroid {
+  position: absolute;
+  width: 280px;
+  margin: 0;
+  padding: 12px 12px 14px;
+  background-color: #fdfdfb;
+  border-radius: 3px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.lp-polaroid-back {
+  top: 8px;
+  left: 0;
+  transform: rotate(-7deg);
+}
+
+.lp-polaroid-front {
+  top: 130px;
+  left: 88px;
+  transform: rotate(4deg);
+}
+
+.lp-polaroid-back:hover {
+  transform: rotate(-7deg) translateY(-6px);
+}
+
+.lp-polaroid-front:hover {
+  transform: rotate(4deg) translateY(-6px);
+}
+
+.lp-polaroid-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  aspect-ratio: 4 / 3;
+  border: 2px dashed #d5d5cd;
+  background-color: #ecece6;
+  color: #8a8a80;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.lp-polaroid-img span {
+  font-size: 32px;
+}
+
+.lp-polaroid figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Bradley Hand', 'Segoe Print', 'Comic Sans MS', cursive;
+  font-size: 15px;
+  color: #55524a;
 }
 
 .lp-btn {
@@ -439,6 +534,7 @@ onUnmounted(() => observer?.disconnect())
 }
 
 .lp-cta .lp-hero-actions {
+  justify-content: center;
   margin-top: 24px;
 }
 
@@ -463,6 +559,37 @@ onUnmounted(() => observer?.disconnect())
   scroll-behavior: smooth;
 }
 
+@media (max-width: 960px) {
+  .lp-hero-grid {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .lp-hero-copy {
+    text-align: center;
+  }
+
+  .lp-hero-tilt {
+    transform-origin: center;
+  }
+
+  .lp-hero-tagline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lp-hero-actions {
+    justify-content: center;
+  }
+
+  .lp-polaroids {
+    flex-basis: auto;
+    width: 380px;
+    max-width: 100%;
+    height: 380px;
+  }
+}
+
 @media (max-width: 640px) {
   .lp-hero {
     padding: 64px 0 56px;
@@ -470,6 +597,12 @@ onUnmounted(() => observer?.disconnect())
 
   .lp-section {
     padding: 56px 0;
+  }
+
+  .lp-polaroids {
+    transform: scale(0.85);
+    transform-origin: top center;
+    height: 330px;
   }
 }
 </style>
