@@ -1,0 +1,21 @@
+:root {
+  --font-title: 'Bricolage Grotesque', var(--vp-font-family-base);
+  --vp-nav-logo-height: 38px;
+  /* Wide enough for the logo and site title, which the nav sizes to the sidebar */
+  --vp-sidebar-width: 320px;
+}
+
+/* Brand name in the top bar, set like the landing page titles */
+.VPNavBarTitle .title {
+  font-family: var(--font-title);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.VPNavBarTitle .logo {
+  transform: translateY(1px) rotate(-10deg);
+}
+
+:root:not(.dark) .VPNavBarTitle .title {
+  color: #121212;
+}
