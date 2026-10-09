@@ -2,9 +2,6 @@
   "buildCommand": "cd scheduled-sale-manager/docs-src && npm install && npm run build && cd ../.. && rm -rf scheduled-sale-manager/docs scheduled-sale-manager/assets scheduled-sale-manager/index.html scheduled-sale-manager/404.html scheduled-sale-manager/hashmap.json scheduled-sale-manager/vp-icons.css && cp -r scheduled-sale-manager/docs-src/.vitepress/dist/. scheduled-sale-manager/",
   "outputDirectory": ".",
   "cleanUrls": true,
-  "redirects": [
-    { "source": "/wcssm2/:path*", "destination": "/scheduled-sale-manager/:path*", "permanent": true }
-  ],
   "rewrites": [
     { "source": "/scheduled-sale-manager/docs", "destination": "/scheduled-sale-manager/docs/" }
   ]

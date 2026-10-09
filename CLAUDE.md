@@ -43,5 +43,4 @@ Conventions when working in the site:
 - `base` is `/scheduled-sale-manager/` in `.vitepress/config.js`. Internal links resolve relative to that base, so `link: '/'` is the landing page and `link: '/docs/'` is the docs home.
 - Adding a page under `docs-src/docs/` usually means also adding a matching entry to the `sidebar` (and optionally `nav`) in `.vitepress/config.js` — the sidebar is scoped to `/docs/` paths; the landing page hides it via frontmatter. Update both in the same change so they don't drift.
 - The build runs `cd scheduled-sale-manager/docs-src && npm install && npm run build`, then copies `.vitepress/dist/.` into `scheduled-sale-manager/`. To reproduce the deploy build locally: run those steps and serve the repo root.
-- The site used to live at `/wcssm2/` (renamed 2026-10-09); `vercel.json` permanently redirects `/wcssm2/*` to the same path under `/scheduled-sale-manager/`, so old links keep working.
 - `cleanUrls` is enabled both in VitePress (pages build to `faq.html`, linked as `/docs/faq`) and in `vercel.json` (so direct hits to extensionless URLs serve the `.html` file).
