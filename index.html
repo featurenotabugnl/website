@@ -14,8 +14,12 @@
 		<link href="https://fonts.bunny.net/css?family=anonymous-pro:400" rel="stylesheet" /> -->
 
 		<style>
+			:root {
+				--body-margin-y: 2.25rem;
+				--body-margin-x: 2.75rem;
+			}
 			body {
-				margin: 2.25rem 2.75rem;
+				margin: var( --body-margin-y ) var( --body-margin-x );
 				font-family: '_Anonymous Pro', monospace;
 			}
 			.logo {
@@ -37,6 +41,21 @@
 			.bug:hover ~ .🐛 {
 				display: inline;
 			}
+			body {
+				display: grid;
+				grid-template-rows: auto 1fr auto;
+				gap: 2.5rem;
+				min-height: calc( 100vh - 2 * var( --body-margin-y ) );
+			}
+			.body p {
+				max-width: 40em;
+			}
+			footer {
+				border-top: 1px solid #ddd;
+				color: #666;
+				padding-top: 1.25rem;
+				font-size: smaller;
+			}
 		</style>
 
 	</head>
@@ -47,6 +66,19 @@
 			<span class="feature">feature</span><br>
 			not<span class="👏">👏</span>a<span class="👏">👏</span><span class="bug">bug</span><span class="🐛">🐛</span><span class="👏">👏</span>
 		</div>
+
+		<main class="body">
+			<p>
+				Previously known as Frique, known for WordPress development, themes and plugins such as the Clientside WP admin theme, Admin Column Manager, Customer Cart Inquiry, Multiple Shipping Solution and Scheduled Sale Manager for WooCommerce.
+			</p>
+			<p>
+				New exciting things are coming up, including a highly anticipated comeback of <strong>Scheduled Sale Manager</strong>, so stay tuned!
+			</p>
+		</main>
+
+		<footer>
+			featurenotabug is a registered subsidiary of studio.berend &mdash; KVK 42029993, NL
+		</footer>
 
 	</body>
 
