@@ -34,7 +34,7 @@ The folders, easy to confuse:
 
 - `scheduled-sale-manager/docs-src/` — **the source you edit.** Committed. Holds `package.json`, `.vitepress/config.js` (`srcDir` is the repo root of the site, `base` is `/scheduled-sale-manager/`), the landing page `index.md`, and the docs Markdown under `docs/`.
 - `scheduled-sale-manager/docs-src/docs/` — the docs content. File path = URL path under `/scheduled-sale-manager/docs/`.
-- Everything else under `scheduled-sale-manager/` (`index.html`, `docs/`, `assets/`, `404.html`, `hashmap.json`, `vp-icons.css`) — **generated build output.** Gitignored, wiped and recreated on every deploy (the dist is copied into `scheduled-sale-manager/`). Never hand-edit it.
+- Everything else under `scheduled-sale-manager/` (`index.html`, `docs/`, `assets/`, `404.html`, `hashmap.json`, `vp-icons.css`, plus whatever `docs-src/public/` holds, such as `screenshots/` and the logos) — **generated build output.** Gitignored, wiped and recreated on every deploy (the dist is copied into `scheduled-sale-manager/`). Never hand-edit it.
 
 The source folder is deliberately named `docs-src`, not `docs`: the build deletes and recreates the generated output under `scheduled-sale-manager/`, so source and output must not share a path.
 

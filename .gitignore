@@ -23,9 +23,7 @@ scheduled-sale-manager/docs-src/.vitepress/cache
 # The VitePress site is built for base /scheduled-sale-manager/, so the whole
 # dist is copied into scheduled-sale-manager/ (landing at
 # /scheduled-sale-manager/, docs under /scheduled-sale-manager/docs/).
-scheduled-sale-manager/docs/
-scheduled-sale-manager/assets/
-scheduled-sale-manager/index.html
-scheduled-sale-manager/404.html
-scheduled-sale-manager/hashmap.json
-scheduled-sale-manager/vp-icons.css
+# Everything there but the source folder is output, including whatever
+# docs-src/public/ holds.
+scheduled-sale-manager/*
+!scheduled-sale-manager/docs-src/

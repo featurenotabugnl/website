@@ -31,10 +31,11 @@ To reproduce the full deploy build locally (from the repo root):
 # 1. Build the VitePress site
 cd scheduled-sale-manager/docs-src && npm install && npm run build && cd ../..
 
-# 2. Wipe the old generated output and copy the fresh dist into scheduled-sale-manager/
-rm -rf scheduled-sale-manager/docs scheduled-sale-manager/assets scheduled-sale-manager/index.html scheduled-sale-manager/404.html \
-	scheduled-sale-manager/hashmap.json scheduled-sale-manager/vp-icons.css
-cp -r scheduled-sale-manager/docs-src/.vitepress/dist/. scheduled-sale-manager/
+# 2. Wipe the old generated output (everything but docs-src) and copy the fresh
+#    dist into scheduled-sale-manager/
+cd scheduled-sale-manager
+find . -mindepth 1 -maxdepth 1 ! -name docs-src -exec rm -rf {} +
+cp -r docs-src/.vitepress/dist/. . && cd ..
 
 # 3. Serve the repo root and visit http://localhost:8000/scheduled-sale-manager/
 python3 -m http.server 8000

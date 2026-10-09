@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd scheduled-sale-manager/docs-src && npm install && npm run build && cd ../.. && rm -rf scheduled-sale-manager/docs scheduled-sale-manager/assets scheduled-sale-manager/index.html scheduled-sale-manager/404.html scheduled-sale-manager/hashmap.json scheduled-sale-manager/vp-icons.css && cp -r scheduled-sale-manager/docs-src/.vitepress/dist/. scheduled-sale-manager/",
+  "buildCommand": "cd scheduled-sale-manager/docs-src && npm install && npm run build && cd .. && find . -mindepth 1 -maxdepth 1 ! -name docs-src -exec rm -rf {} + && cp -r docs-src/.vitepress/dist/. .",
   "outputDirectory": ".",
   "cleanUrls": true,
   "rewrites": [
