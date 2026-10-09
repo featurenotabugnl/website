@@ -1,6 +1,6 @@
 ---
 layout: page
-title: WooCommerce Scheduled Sale Manager
+title: Scheduled Sale Manager
 titleTemplate: Store-wide scheduled sales for WooCommerce
 sidebar: false
 aside: false
@@ -280,7 +280,7 @@ onUnmounted(() => {
       <article class="lp-feature">
         <span class="lp-feature-icon"><Puzzle :size="22" :stroke-width="1.75" aria-hidden="true" /></span>
         <h3>Built to extend</h3>
-        <p>More than 100 documented <code>wcssm-*</code> filters and actions let developers adjust scheduling, targeting, pricing and the admin without touching the plugin's code. Every text is translation-ready, too.</p>
+        <p>More than 100 documented <code>fnabssm-*</code> filters and actions let developers adjust scheduling, targeting, pricing and the admin without touching the plugin's code. Every text is translation-ready, too.</p>
       </article>
     </div>
   </div>

@@ -6,7 +6,7 @@
 
 ## What is Scheduled Sale Manager?
 
-**WooCommerce Scheduled Sale Manager** lets you set up sales across your store from one place. Instead of editing individual products, you create a **sale** that says *which products* are on offer, *what the discount is*, and *when it runs*. The plugin applies it automatically for as long as the schedule is active, and takes it away again when it ends.
+**Scheduled Sale Manager** lets you set up sales across your store from one place. Instead of editing individual products, you create a **sale** that says *which products* are on offer, *what the discount is*, and *when it runs*. The plugin applies it automatically for as long as the schedule is active, and takes it away again when it ends.
 
 Each sale brings together four things:
 
@@ -23,7 +23,7 @@ Each sale brings together four things:
 - **Multiple sales at once.** Run overlapping campaigns side by side. When more than one sale applies to a product, the customer gets the lowest price.
 - **Your own prices are safe.** A sale only ever lowers a price, and your own sale prices keep working underneath it.
 - **Live or stored prices.** By default, sale prices are worked out the moment they're shown and never stored. When other software needs to see sale prices in the database, an optional mode writes them there and restores your prices afterwards.
-- **Built to extend.** Developers can adjust scheduling, targeting, pricing and more through `wcssm-*` [hooks](/docs/reference/hooks).
+- **Built to extend.** Developers can adjust scheduling, targeting, pricing and more through `fnabssm-*` [hooks](/docs/reference/hooks).
 
 ## Two pricing modes
 

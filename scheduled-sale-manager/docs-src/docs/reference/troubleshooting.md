@@ -37,7 +37,7 @@ The queue is processed by WordPress's scheduled tasks (WP-Cron), which normally 
 - **WP-Cron is switched off** (`DISABLE_WP_CRON` in `wp-config.php`) without a server cron job to replace it. Ask your host to set up a real cron job that runs WordPress's scheduled tasks every minute.
 - **A long-running or broken task** from another plugin blocking the queue.
 
-To see the tasks themselves, go to **WooCommerce → Status → Scheduled Actions** and search for `wcssm`. The red rows in the status box link straight there.
+To see the tasks themselves, go to **WooCommerce → Status → Scheduled Actions** and search for `fnabssm`. The red rows in the status box link straight there.
 
 The plugin also runs an hourly check that brings all prices up to date, so prices catch up by themselves once the queue runs again.
 

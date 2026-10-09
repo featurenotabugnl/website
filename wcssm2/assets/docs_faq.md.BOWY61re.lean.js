@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as i,a0 as s}from"./chunks/framework.Bf27OMyu.js";const u=JSON.parse('{"title":"FAQ","description":"","frontmatter":{},"headers":[],"relativePath":"docs/faq.md","filePath":"docs/faq.md"}'),h={name:"docs/faq.md"};function r(n,e,o,l,d,c){return t(),i("div",null,[...e[0]||(e[0]=[s("",19)])])}const w=a(h,[["render",r]]);export{u as __pageData,w as default};

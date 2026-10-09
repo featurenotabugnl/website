@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'WCSSM2',
-  description: 'WooCommerce Scheduled Sale Manager',
+  description: 'Scheduled Sale Manager',
   srcDir: '.',
-  base: '/wcssm2/',
+  base: '/scheduled-sale-manager/',
   cleanUrls: true,
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],

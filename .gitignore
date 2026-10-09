@@ -16,15 +16,16 @@ Icon
 
 ### VitePress
 node_modules
-wcssm2/docs-src/.vitepress/dist
-wcssm2/docs-src/.vitepress/cache
+scheduled-sale-manager/docs-src/.vitepress/dist
+scheduled-sale-manager/docs-src/.vitepress/cache
 
 # Generated build output — never committed, wiped and recreated on every build.
-# The VitePress site is built for base /wcssm2/, so the whole dist is copied
-# into wcssm2/ (landing at /wcssm2/, docs under /wcssm2/docs/).
-wcssm2/docs/
-wcssm2/assets/
-wcssm2/index.html
-wcssm2/404.html
-wcssm2/hashmap.json
-wcssm2/vp-icons.css
+# The VitePress site is built for base /scheduled-sale-manager/, so the whole
+# dist is copied into scheduled-sale-manager/ (landing at
+# /scheduled-sale-manager/, docs under /scheduled-sale-manager/docs/).
+scheduled-sale-manager/docs/
+scheduled-sale-manager/assets/
+scheduled-sale-manager/index.html
+scheduled-sale-manager/404.html
+scheduled-sale-manager/hashmap.json
+scheduled-sale-manager/vp-icons.css

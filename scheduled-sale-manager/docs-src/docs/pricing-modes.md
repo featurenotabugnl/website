@@ -43,7 +43,7 @@ Database mode updates prices at fixed moments rather than on every page view:
 - **When you save a product.**
 - **Every hour**, as a safety net that catches anything missed.
 
-Large catalogues are processed in portions, so a sale covering thousands of products doesn't time out; the rest continues in the background within a few minutes.
+Large catalogues are processed in portions, so a sale covering thousands of products doesn't time out. The first portion is written while you save, the rest continues in the background at a portion per scheduled-task run, typically a couple of hundred products a minute. A sale covering several thousand products can therefore take a quarter of an hour or more to be fully written, and in the meantime some products already show the new price while others still show the old one. The same goes for switching to database mode and for changing an active sale.
 
 ### Editing a product while a sale sets its price
 
